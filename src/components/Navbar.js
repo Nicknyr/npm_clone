@@ -19,8 +19,10 @@ const RANDOMCONTAINER = styled.div`
 `;
 
 const NAVCONTAINER = styled.div`
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
     border-top-style: solid;
     border-width: 10px 0 0;
@@ -48,8 +50,8 @@ const NAVCONTAINER = styled.div`
 const Navbar = () => {
     return (
         <STYLES>
-            <RANDOMCONTAINER></RANDOMCONTAINER>
             <NAVCONTAINER>
+                <RANDOMCONTAINER></RANDOMCONTAINER>
                 <div className="border"></div>
                 <ul>
                     <li>
