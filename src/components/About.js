@@ -47,19 +47,26 @@ const INTRO = styled.div`
 const FEATURE = styled.div`
     height: auto; 
     width: 100%;
+    //flex: 1;
     text-align: center;
     padding-top: 3em;
     padding-bottom: 3em;
+
 
     p {
         font-size: .9rem;
         font-weight: 400;
         line-height: 1.6;
         padding: 0em 2em;
+        height: 7rem;
     }
 
     @media(min-width: 768px) {
         width: 50%;
+        
+        p {
+            text-align: left;
+        }
     }
 
     @media(min-width: 992px) {
@@ -80,6 +87,7 @@ const BUTTON = styled.button`
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     cursor: pointer;
+
 `;
 
 const About = () => {
