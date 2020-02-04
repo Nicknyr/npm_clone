@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
+import {phrases} from '../assets/randomwords';
 
 const STYLES = styled.div`
     height: auto;
@@ -58,32 +59,46 @@ const NAVCONTAINER = styled.div`
     }
 `;
 
-const Navbar = () => {
-    return (
-        <STYLES>
-            <NAVCONTAINER>
-                <div className="border"></div>
-                <RANDOMCONTAINER>
-                    &#10084;
-                    <span>Narcissistic Project Managers</span>
-                </RANDOMCONTAINER>
-                <ul>
-                    <li>
-                        <a href="#">Products</a>
-                    </li>
-                    <li>
-                        <a href="#">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="#">Documentation</a>
-                    </li>
-                    <li>
-                        <a href="#">Community</a>
-                    </li>
-                </ul>
-            </NAVCONTAINER>
-        </STYLES>
-    );
+class Navbar extends Component {
+    constructor(props){
+        super(props);
+    }
+
+    generateRandomPhrase = () => {
+        let randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+
+        return (
+            <span>{randomPhrase}</span>
+        );
+    }
+
+    render() {
+        return (
+            <STYLES>
+                <NAVCONTAINER>
+                    <div className="border"></div>
+                    <RANDOMCONTAINER>
+                        &#10084;
+                        <span>{this.generateRandomPhrase()}</span>
+                    </RANDOMCONTAINER>
+                    <ul>
+                        <li>
+                            <a href="#">Products</a>
+                        </li>
+                        <li>
+                            <a href="#">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#">Documentation</a>
+                        </li>
+                        <li>
+                            <a href="#">Community</a>
+                        </li>
+                    </ul>
+                </NAVCONTAINER>
+            </STYLES>
+        );
+    }
 }
 
 export default Navbar;

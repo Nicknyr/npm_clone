@@ -6,13 +6,11 @@ import About from './components/About';
 import OpenSource from './components/OpenSource';
 import Companies from './components/Companies';
 import Footer from './components/Footer';
-import RandomWords from './components/RandomWords';
 
 function App() {
   return (
     <div>
       <Navbar />
-      <RandomWords />
       <Searchbar />
       <Hero />
       <About />
