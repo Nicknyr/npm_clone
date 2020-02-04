@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Blob from '../assets/blob.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
@@ -20,13 +19,43 @@ const CONTAINER = styled.div`
 
     .search-container {
         width: auto;
-        //background: salmon;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .fa-search {
+            position: absolute;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
 
         input {
             width: 750px;
             height: 3rem;
             background: #f2f2f2;
             border: none;
+
+            ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: #ccc;
+                font-weight: bold;
+                padding-left: 3rem;
+            }
+            ::-moz-placeholder { /* Firefox 19+ */
+                color: #ccc;
+                font-weight: bold;
+                padding-left: 3rem;
+            }
+            :-ms-input-placeholder { /* IE 10+ */
+                color: #ccc;
+                font-weight: bold;
+                padding-left: 3rem;
+            }
+            :-moz-placeholder { /* Firefox 18- */
+                color: #ccc;
+                font-weight: bold;
+                padding-left: 3rem;
+            }
         }
     }
 `;
@@ -60,10 +89,12 @@ const SearchBar = () => {
         <STYLES>
             <CONTAINER>
                 <div className="logo-container">
-                    <img src={Blob} height="50"/>
+                <svg width={70} height={70} viewBox={'0 0 780 250'}>
+                    <path fill="#231F20" d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z"></path>
+                </svg>
                 </div>
                 <div className="search-container">
-                    <FontAwesomeIcon icon={faSearch} />
+                    <FontAwesomeIcon icon={faSearch} size="lg"/>
                     <input type="text" placeholder="Search packages"></input>
                     <BUTTON>Search</BUTTON>
                 </div>
