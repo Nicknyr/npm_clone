@@ -52,6 +52,9 @@ const FEATURE = styled.div`
     padding-top: 3em;
     padding-bottom: 3em;
 
+    img {
+        margin-right: 1rem;
+    }
 
     p {
         font-size: .9rem;
@@ -63,9 +66,13 @@ const FEATURE = styled.div`
 
     @media(min-width: 768px) {
         width: 50%;
+        text-align: left;
         
         p {
             text-align: left;
+            //width: 80%;
+           padding: 0;
+           padding-right: 1.5rem;
         }
     }
 
@@ -87,7 +94,23 @@ const BUTTON = styled.button`
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     cursor: pointer;
+`;
 
+const FEATURECONTAINER = styled.div`
+    display: flex;
+    flex-direction: column;
+    //background: pink;
+
+    @media(min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 2rem;
+    }
+
+    @media(min-width: 992px) {
+        width: 80%;
+        margin: 0 auto;
+    }
 `;
 
 const About = () => {
@@ -102,39 +125,41 @@ const About = () => {
                     </p>
                 </INTRO>
             </INTROCONTAINER>
-            <FEATURE>
-                <img src={Blob2} height="60" />
-                <h4>npm Free</h4>
-                <p>
-                   Become a contributing member of the open source JavaScript community. Create public packages, publish updates, audit your dependencies, and more.
-                </p>
-                <BUTTON>LEARN MORE</BUTTON>
-            </FEATURE>
-            <FEATURE>
-                <img src={Coffee} height="60" />
-                <img src={Flag} height="60" />
-                <h4>npm Pro & Teams</h4>
-                <p>
-                   For next-level JavaScript developers who want more capabilities. Pro and Teams add the ability to build private packages for you, your team, or for customers
-                </p>
-                <BUTTON>LEARN MORE</BUTTON>
-            </FEATURE>
-            <FEATURE>
-                <img src={Bars} height="60" />
-                <h4>npm Enterprise</h4>
-                <p>
-                   For very large teams and business-critical projects, npm Enterprise delivers features that organizations with hundreds of developers need, like SSO and enhanced security.
-                </p>
-                <BUTTON>LEARN MORE</BUTTON>
-            </FEATURE>
-            <FEATURE>
-                <img src={Shield} height="60" />
-                <h4>npm PkgSafe</h4>
-                <p>
-                   Our security team's unique insights into JavaScript vulnerabilities and threats are delivered as free and premium features, as well as services for resellers and others.
-                </p>
-                <BUTTON>LEARN MORE</BUTTON>
-            </FEATURE>
+            <FEATURECONTAINER>
+                <FEATURE>
+                    <img src={Blob2} height="60" />
+                    <h4>npm Free</h4>
+                    <p>
+                    Become a contributing member of the open source JavaScript community. Create public packages, publish updates, audit your dependencies, and more.
+                    </p>
+                    <BUTTON>LEARN MORE</BUTTON>
+                </FEATURE>
+                <FEATURE>
+                    <img src={Coffee} height="60" />
+                    <img src={Flag} height="60" />
+                    <h4>npm Pro & Teams</h4>
+                    <p>
+                    For next-level JavaScript developers who want more capabilities. Pro and Teams add the ability to build private packages for you, your team, or for customers
+                    </p>
+                    <BUTTON>LEARN MORE</BUTTON>
+                </FEATURE>
+                <FEATURE>
+                    <img src={Bars} height="60" />
+                    <h4>npm Enterprise</h4>
+                    <p>
+                    For very large teams and business-critical projects, npm Enterprise delivers features that organizations with hundreds of developers need, like SSO and enhanced security.
+                    </p>
+                    <BUTTON>LEARN MORE</BUTTON>
+                </FEATURE>
+                <FEATURE>
+                    <img src={Shield} height="60" />
+                    <h4>npm PkgSafe</h4>
+                    <p>
+                    Our security team's unique insights into JavaScript vulnerabilities and threats are delivered as free and premium features, as well as services for resellers and others.
+                    </p>
+                    <BUTTON>LEARN MORE</BUTTON>
+                </FEATURE>
+            </FEATURECONTAINER>
         </STYLES>
     );
 }

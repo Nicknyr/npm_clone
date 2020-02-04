@@ -27,7 +27,7 @@ const COLUMN= styled.div`
     //background: green;
     flex: auto;
     margin-top: 1rem;
-    margin: 1rem 4rem;
+    //margin: 1rem 4rem;
 
     ul {
         padding: 0;

@@ -3,18 +3,19 @@ import styled, { css } from 'styled-components';
 import Background from '../assets/background-small.png';
 
 const STYLES = styled.div`
-    height: 20em;
+    height: auto;
     width: 100%;
     background: url(${Background});
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    //filter: brightness(90%);
 `;
 
 const CONTAINER = styled.div`
     text-align: center;
-    padding: 1rem;
+    padding: 2.5rem 1rem;
 
     h3 {
         font-size: 1.5rem;
@@ -25,6 +26,28 @@ const CONTAINER = styled.div`
         font-size: 1.1rem;
         line-height: 1.4;
         color: snow;
+    }
+
+    @media(min-width: 768px) {
+        width: 70%;
+        font-size: 1rem;
+        
+        h3 {
+            font-size: 1.7rem;
+        }
+    }
+
+    @media(min-width: 992px) {
+        width: 45%;
+
+        h3 {
+            font-size: 2.8rem;
+            margin: 2rem;
+        }
+
+        p {
+            margin: 1.5rem;
+        }
     }
 `;
 
