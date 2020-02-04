@@ -10,7 +10,7 @@ const STYLES = styled.div`
 const RANDOMCONTAINER = styled.div`
     height: 5em;
     width: 50%;
-    background: green;
+    //background: green;
     display: none;
 
     @media(min-width: 768px) {
