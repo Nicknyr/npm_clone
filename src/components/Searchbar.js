@@ -14,8 +14,10 @@ const CONTAINER = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    margin-left: 1%;
+    margin-right: 1%;
 
     .search-container {
         width: auto;
@@ -31,7 +33,7 @@ const CONTAINER = styled.div`
         }
 
         input {
-            width: 750px;
+            width: 700px;
             height: 3rem;
             background: #f2f2f2;
             border: none;
@@ -68,6 +70,7 @@ const BUTTON = styled.button`
     color: snow;
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
 
     ${props => props.signin && css`
         border: none;
@@ -89,9 +92,9 @@ const SearchBar = () => {
         <STYLES>
             <CONTAINER>
                 <div className="logo-container">
-                <svg width={70} height={70} viewBox={'0 0 780 250'}>
-                    <path fill="#231F20" d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z"></path>
-                </svg>
+                    <svg width={70} height={70} viewBox={'0 0 780 250'}>
+                        <path fill="#231F20" d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z"></path>
+                    </svg>
                 </div>
                 <div className="search-container">
                     <FontAwesomeIcon icon={faSearch} size="lg"/>

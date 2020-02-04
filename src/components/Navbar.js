@@ -2,16 +2,24 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const STYLES = styled.div`
-    height: 5em;
+    height: auto;
     width: 100%;
     display: flex;
+    border-bottom: 1px solid #ccc;
 `;
 
 const RANDOMCONTAINER = styled.div`
-    height: 5em;
+    height: auto;
     width: 50%;
+    margin-left: 3%;
     //background: green;
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    span {
+        margin-left: 1rem;
+    }
 
     @media(min-width: 768px) {
         display: flex;
@@ -30,7 +38,10 @@ const NAVCONTAINER = styled.div`
 
     ul {
         display: flex;
+        justify-content: flex-end;
+        margin-right: 3%;
         padding: 0;
+        width: 50%;
 
         li {
             list-style-type: none;
@@ -51,8 +62,11 @@ const Navbar = () => {
     return (
         <STYLES>
             <NAVCONTAINER>
-                <RANDOMCONTAINER></RANDOMCONTAINER>
                 <div className="border"></div>
+                <RANDOMCONTAINER>
+                    &#10084;
+                    <span>Narcissistic Project Managers</span>
+                </RANDOMCONTAINER>
                 <ul>
                     <li>
                         <a href="#">Products</a>
