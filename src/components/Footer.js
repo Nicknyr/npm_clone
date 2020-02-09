@@ -5,21 +5,31 @@ import Blob2 from '../assets/blob2.png';
 const STYLES = styled.div`
     height: auto;
     //width: 100%;
-    padding: 2rem 2.5rem;
     display: flex;
     flex-direction: column;
-    border-top: 1px solid lightgrey;
-    border-bottom-style: solid;
-    border-bottom-width: 10px;
-    border-image: linear-gradient(90deg, rgba(250,135,20,1) 0%, rgba(227,57,21,1) 50%, rgba(217,41,214,1) 100%) 3;
     color: grey;
-    //background: pink;
+    border-top: 1px solid lightgrey;
+
+    &::after {
+        content: "";
+        //height: 10px;
+        width: 100%;
+        border-bottom-style: solid;
+        border-bottom-width: 10px;
+        border-image: linear-gradient(90deg, rgba(250,135,20,1) 0%, rgba(227,57,21,1) 50%, rgba(217,41,214,1) 100%) 3;
+    }
 
     @media(min-width: 768px) {
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 2rem 3rem;
     }
+`;
+
+const CONTAINER = styled.div`
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    width: 100%;
 `;
 
 const COLUMN= styled.div`
@@ -87,78 +97,80 @@ const LOGOCONTAINER = styled.div`
 const Footer = () => {
     return(
         <STYLES>
-            <LOGOCONTAINER>
-                <svg height={50} width={50} viewBox={"0 0 27.23 27.23"}>
-                    <rect fill="#333333" width="27.23" height="27.23" rx="2"></rect>
-                    <polygon fill="#fff" points="5.8 21.75 13.66 21.75 13.67 9.98 17.59 9.98 17.58 21.76 21.51 21.76 21.52 6.06 5.82 6.04 5.8 21.75"></polygon>
-                </svg>
-            </LOGOCONTAINER>
-            <COLUMN>
-                <ul>
-                    <li>
-                        <h4>Help</h4>
-                    </li>
-                    <li>
-                        <a href="#">Documentation</a>
-                    </li>
-                    <li>
-                        <a href="#">Community</a>
-                    </li>
-                    <li>
-                        <a href="#">Resources</a>
-                    </li>
-                    <li>
-                        <a href="#">Advisories</a>
-                    </li>
-                    <li>
-                        <a href="#">Status</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </COLUMN>
-            <COLUMN>
-                <ul>
-                    <li>
-                        <h4>About</h4>
-                    </li>
-                    <li>
-                        <a href="#">Company</a>
-                    </li>
-                    <li>
-                        <a href="#">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#">Careers</a>
-                    </li>
-                    <li>
-                        <a href="#">Webinars</a>
-                    </li>
-                    <li>
-                        <a href="#">Press</a>
-                    </li>
-                    <li>
-                        <a href="#">Newsletter</a>
-                    </li>
-                </ul>
-            </COLUMN>
-            <COLUMN>
-                <ul>
-                    <li>
-                        <h4>Terms & Policies</h4>
-                    </li>
-                    <li>
-                        <a href="#">Policies</a>
-                    </li>
-                    <li>
-                        <a href="#">Terms of Use</a>
-                    </li>
-                    <li>
-                        <a href="#">Code of Conduct</a>
-                    </li>
-                </ul>
-            </COLUMN>
+            <CONTAINER>
+                <LOGOCONTAINER>
+                    <svg height={50} width={50} viewBox={"0 0 27.23 27.23"}>
+                        <rect fill="#333333" width="27.23" height="27.23" rx="2"></rect>
+                        <polygon fill="#fff" points="5.8 21.75 13.66 21.75 13.67 9.98 17.59 9.98 17.58 21.76 21.51 21.76 21.52 6.06 5.82 6.04 5.8 21.75"></polygon>
+                    </svg>
+                </LOGOCONTAINER>
+                <COLUMN>
+                    <ul>
+                        <li>
+                            <h4>Help</h4>
+                        </li>
+                        <li>
+                            <a href="#">Documentation</a>
+                        </li>
+                        <li>
+                            <a href="#">Community</a>
+                        </li>
+                        <li>
+                            <a href="#">Resources</a>
+                        </li>
+                        <li>
+                            <a href="#">Advisories</a>
+                        </li>
+                        <li>
+                            <a href="#">Status</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </COLUMN>
+                <COLUMN>
+                    <ul>
+                        <li>
+                            <h4>About</h4>
+                        </li>
+                        <li>
+                            <a href="#">Company</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#">Webinars</a>
+                        </li>
+                        <li>
+                            <a href="#">Press</a>
+                        </li>
+                        <li>
+                            <a href="#">Newsletter</a>
+                        </li>
+                    </ul>
+                </COLUMN>
+                <COLUMN>
+                    <ul>
+                        <li>
+                            <h4>Terms & Policies</h4>
+                        </li>
+                        <li>
+                            <a href="#">Policies</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms of Use</a>
+                        </li>
+                        <li>
+                            <a href="#">Code of Conduct</a>
+                        </li>
+                    </ul>
+                </COLUMN>
+            </CONTAINER>
         </STYLES>
     );
 }

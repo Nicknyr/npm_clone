@@ -41,13 +41,13 @@ const CONTAINER = styled.div`
     .search-container {
         //width: 700px;
         width: 50%;
-        flex-grow: 1;
         position: relative;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        flex: auto;
+        //flex: auto;
         order: 3;
+        flex-grow: 3;
 
         .fa-search {
             margin-left: 1rem;
