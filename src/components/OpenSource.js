@@ -55,7 +55,7 @@ const OpenSource = () => {
     return (
         <STYLES>
             <CONTAINER>
-                <h3>We love open source</h3>
+                <h3>We &#10084; open source</h3>
                 <p>
                 At npm, Inc., we're proud to dedicate teams of full-time employees to operating the npm Registry, enhancing the CLI, improving JavaScript security, and other projects that support and nurture a vibrant open source community.
                 </p>

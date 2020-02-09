@@ -3,6 +3,8 @@ import styled, { css } from 'styled-components';
 import {phrases} from '../assets/randomwords';
 
 const STYLES = styled.div`
+    @import url('https://fonts.googleapis.com/css?family=Arimo|Poppins|Fira+Mono&display=swap');
+    font-family: 'Poppins', sans-serif;
     height: auto;
     width: 100%;
     display: flex;
@@ -13,13 +15,27 @@ const RANDOMCONTAINER = styled.div`
     height: auto;
     width: 50%;
     margin-left: 3%;
-    //background: green;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    display: none;
 
     span {
-        margin-left: 1rem;
+        color: #171717;
+        
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    .heart {
+        padding-right: 15px;
+        font-size: 20px;
+    }
+
+    .random-phrase {
+        cursor: pointer;
+        font-size: .9rem;
     }
 
     @media(min-width: 768px) {
@@ -57,19 +73,55 @@ const NAVCONTAINER = styled.div`
             }
         }
     }
+
+
+        ul {
+            li {
+                a:hover {
+                    opacity: .5;
+                }
+            }
+        }
+
+        .products-li:hover  .products-dropdown {
+            display: flex;
+        }
+
+        .products-dropdown {
+            position: absolute;
+            width: 6em;
+            height: 6em;
+            background: snow;
+            display: block;
+            z-index: 10;
+            border-radius: 5px;
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: .5em;
+            margin-left: -25px;
+            //margin-top: 10px;
+            -webkit-box-shadow: 0px 2px 10px 0px rgba(66,66,66,1);
+            -moz-box-shadow: 0px 2px 10px 0px rgba(66,66,66,1);
+            box-shadow: 0px 2px 10px 0px rgba(66,66,66,1);
+        }
+    }
 `;
 
 class Navbar extends Component {
     constructor(props){
         super(props);
+        
+        this.state = {
+            phrase: 'Narrowly Preventing Mayhem'
+        };
     }
 
     generateRandomPhrase = () => {
         let randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
-
-        return (
-            <span>{randomPhrase}</span>
-        );
+        this.setState({
+            phrase: randomPhrase
+        })
     }
 
     render() {
@@ -78,12 +130,28 @@ class Navbar extends Component {
                 <NAVCONTAINER>
                     <div className="border"></div>
                     <RANDOMCONTAINER>
-                        &#10084;
-                        <span>{this.generateRandomPhrase()}</span>
+                        <span className="heart">&#10084;</span>
+                        <span 
+                            onClick={this.generateRandomPhrase}
+                            className="random-phrase"
+                            >
+                                {this.state.phrase}
+                        </span>
                     </RANDOMCONTAINER>
                     <ul>
-                        <li>
+                        <li className="products-li">
                             <a href="#">Products</a>
+                            <ul className="products-dropdown">
+                                <li>
+                                    <a href="#">Pro</a>
+                                </li>
+                                <li>
+                                    <a href="#">Teams</a>
+                                </li>
+                                <li>
+                                    <a href="#">Enterprise</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="#">Pricing</a>
