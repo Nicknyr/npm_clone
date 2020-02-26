@@ -56,9 +56,17 @@ const NAVCONTAINER = styled.div`
     ul {
         display: flex;
         justify-content: flex-end;
-        margin-right: 3%;
-        padding: 0;
-        width: 50%;
+        width: 90%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: .9rem;
+        font-weight: bold !important;
+
+
+        @media(min-width: 768px) {
+            width: 50%;
+            font-size: 1rem;
+        }
 
         li {
             list-style-type: none;

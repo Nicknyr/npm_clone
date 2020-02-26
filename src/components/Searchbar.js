@@ -19,35 +19,42 @@ const CONTAINER = styled.div`
     margin-left: 1%;
     margin-right: 1%;
     flex-wrap: wrap;
+    flex: 1 1 auto;
 
     .logo-container {
         flex-grow: 0;
-        margin-left: 2rem;
-        margin-right: 2rem;
         flex: auto;
         order: 1;
         flex: 1 1 auto;
+        //background: red;
     }
 
     .login-container {
         flex-grow: 0;
-        margin-left: 2rem;
-        margin-right: 2rem;
+        //margin-left: 2rem;
+        //margin-right: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
         flex: auto;
         order: 2;
         flex: 1 1 auto;
+        //background: red;
+        //width: 300px;
+        width: auto;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .search-container {
-        //width: 700px;
-        width: 50%;
+        width: 100%;
         position: relative;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        //flex: auto;
         order: 3;
         flex-grow: 3;
+        flex-shrink: 1;
+        //background: red;
 
         .fa-search {
             margin-left: 1rem;
@@ -59,8 +66,9 @@ const CONTAINER = styled.div`
 
         input {
             //width: 700px;
-            width: calc(100% - 10px);
+            //width: calc(100% - 10px);
             height: 40px;
+            width: 100%;
             background: #f2f2f2;
             border: none;
             padding: 5px;
@@ -92,23 +100,29 @@ const CONTAINER = styled.div`
     }
 
     @media(min-width: 768px) {
+        flex-wrap: nowrap;
+
         .logo-container {
             order: 1;
+            margin-left: 2rem;
+            margin-right: 2rem;
         }
 
         .search-container {
             order: 2;
+            width: 50%;
         }
 
         .login-container {
             order: 3;
+            width: 200px;
         }
     }
 `;
 
 const BUTTON = styled.button`
     height: 3rem;
-    width: 8rem;
+    width: 7rem;
     background: black;
     border: none;
     color: snow;
