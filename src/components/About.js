@@ -75,7 +75,7 @@ const FEATURE = styled.div`
         font-size: .9rem;
         font-weight: 400;
         line-height: 1.6;
-        margin-bottom: 3.5rem;
+        margin-bottom: 2rem;
     }
 
     @media(min-width: 768px) {
@@ -88,15 +88,21 @@ const FEATURE = styled.div`
             //width: 80%;
            padding: 0;
            padding-right: 1.5rem;
-           margin-bottom: 2rem;
+           margin-bottom: 0;
+           
         }
     }
 
     @media(min-width: 992px) {
         flex-wrap: nowrap;
         flex: 1;
-        padding-top: 1rem;
+        padding-top: 0rem;
         padding-bottom: 1rem;
+
+        p {
+            margin-bottom: 3rem;
+        }
+        
     }
 `;
 
