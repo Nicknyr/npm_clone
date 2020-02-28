@@ -63,8 +63,8 @@ const FEATURE = styled.div`
     height: auto; 
     width: 100%;
     text-align: center;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     position: relative;
    
     .flag {
@@ -75,7 +75,7 @@ const FEATURE = styled.div`
         font-size: .9rem;
         font-weight: 400;
         line-height: 1.6;
-        margin-bottom: 2rem;
+        margin-bottom: 3.5rem;
     }
 
     @media(min-width: 768px) {
@@ -88,12 +88,15 @@ const FEATURE = styled.div`
             //width: 80%;
            padding: 0;
            padding-right: 1.5rem;
+           margin-bottom: 2rem;
         }
     }
 
     @media(min-width: 992px) {
         flex-wrap: nowrap;
         flex: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 `;
 
@@ -108,6 +111,15 @@ const BUTTON = styled.button`
     cursor: pointer;
     position: absolute;
     bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media(min-width: 768px) {
+        left: 0%;
+        transform: translate(0%, 0%);
+        bottom: 0;
+    }
+ 
 `;
 
 const FEATURECONTAINER = styled.div`
