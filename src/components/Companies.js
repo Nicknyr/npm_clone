@@ -6,18 +6,26 @@ const STYLES = styled.div`
     height: auto;
     //width: 100%;
     text-align: center;
-    padding: 1rem;
+    //padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin: 0 auto;
 
     h3 {
-        font-size: 1.7rem;
+        @import url('https://fonts.googleapis.com/css?family=Arimo|Poppins&display=swap');
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        line-height: 1.25;
+        font-weight: 600;
+        max-width: 32em;
     }
 `;
 
 const CONTAINER = styled.div`
     height: auto;
     width: auto;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
     //background: salmon;
 
     img {

@@ -55,7 +55,7 @@ const NAVCONTAINER = styled.div`
 
     ul {
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         width: 90%;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -66,6 +66,7 @@ const NAVCONTAINER = styled.div`
         @media(min-width: 768px) {
             width: 50%;
             font-size: 1rem;
+            justify-content: flex-end;
         }
 
         li {

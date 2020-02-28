@@ -12,7 +12,6 @@ const CONTAINER = styled.div`
     height: auto;
     width: 100%;
     display: flex;
-    //justify-content: space-around;
     align-items: center;
     padding-top: .3rem;
     padding-bottom: .3rem;
@@ -26,20 +25,17 @@ const CONTAINER = styled.div`
         flex: auto;
         order: 1;
         flex: 1 1 auto;
-        //background: red;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .login-container {
         flex-grow: 0;
-        //margin-left: 2rem;
-        //margin-right: 2rem;
         margin-left: 1rem;
         margin-right: 1rem;
         flex: auto;
         order: 2;
         flex: 1 1 auto;
-        //background: red;
-        //width: 300px;
         width: auto;
         display: flex;
         justify-content: flex-end;
@@ -54,13 +50,16 @@ const CONTAINER = styled.div`
         order: 3;
         flex-grow: 3;
         flex-shrink: 1;
-        //background: red;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: .5em;
+        padding-bottom: .5em;
 
         .fa-search {
             margin-left: 1rem;
             margin-right: 1rem;
             position: absolute;
-            left: 3px;
+            left: 20px;
             top: calc(50% - 0.5em);
         }
 
@@ -72,9 +71,10 @@ const CONTAINER = styled.div`
             background: #f2f2f2;
             border: none;
             padding: 5px;
-            padding-left: 50px;
+            padding-left: 60px;
             font-family: 'Fira Mono', monospace;
             font-size: 16px;
+           
 
             ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                 font-size: 16px;
@@ -104,13 +104,11 @@ const CONTAINER = styled.div`
 
         .logo-container {
             order: 1;
-            margin-left: 2rem;
-            margin-right: 2rem;
         }
 
         .search-container {
             order: 2;
-            width: 50%;
+            width: 100%;
         }
 
         .login-container {
@@ -151,6 +149,14 @@ const BUTTON = styled.button`
                 opacity: .5;
             } 
     `}
+
+    ${props => props.searchbar && css`
+            width: 12rem;
+
+            @media(min-width: 992px) {
+                width: 9rem;
+            }
+    `}
 `;
 
 const SearchBar = () => {
@@ -167,7 +173,7 @@ const SearchBar = () => {
                         <FontAwesomeIcon icon={faSearch} size="lg"/>
                     </span>
                     <input type="text" placeholder="Search packages"></input>
-                    <BUTTON>Search</BUTTON>
+                    <BUTTON searchbar>Search</BUTTON>
                 </div>
                 <div className="login-container">
                     <BUTTON signup>Sign Up</BUTTON>

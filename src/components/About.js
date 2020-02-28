@@ -11,8 +11,10 @@ const STYLES = styled.div`
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 `;
 
 const INTROCONTAINER = styled.div`
@@ -24,14 +26,21 @@ const INTRO = styled.div`
     //width: 100%;
     text-align: center;
     padding: 1.5em;
+    
 
     p {
         font-weight: 400;
-        line-height: 1.6;
+        line-height: 1.5;
+        color: #333;
+        font-size: 1.1rem;
     }
 
     h3 {
-        font-size: 1.8rem;
+        @import url('https://fonts.googleapis.com/css?family=Arimo|Poppins&display=swap');
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        line-height: 1.25;
+        font-weight: 600;
     }
 
     @media(min-width: 768px) {
@@ -40,33 +49,39 @@ const INTRO = styled.div`
     }
 
     @media(min-width: 992px) {
-        width: 50%;
+        max-width: 32rem;
+        margin-bottom: 0rem;
+
+        h3 {
+            font-size: 2.25rem;
+            line-height: 1.25;
+        }
     }
 `;
 
 const FEATURE = styled.div`
     height: auto; 
     width: 100%;
-    //flex: 1;
     text-align: center;
-    padding-top: 3em;
-    padding-bottom: 3em;
-
-    img {
-        margin-right: 1rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    position: relative;
+   
+    .flag {
+        margin-left: 1rem;
     }
 
     p {
         font-size: .9rem;
         font-weight: 400;
         line-height: 1.6;
-        padding: 0em 2em;
-        height: 7rem;
+        margin-bottom: 2rem;
     }
 
     @media(min-width: 768px) {
         width: 50%;
         text-align: left;
+    
         
         p {
             text-align: left;
@@ -83,7 +98,6 @@ const FEATURE = styled.div`
 `;
 
 const BUTTON = styled.button`
-    //width: 12em;
     height: auto;
     border-radius: 25px;
     background: transparent;
@@ -91,15 +105,15 @@ const BUTTON = styled.button`
     font-size: 1.1rem;
     font-weight: bold;
     padding: .6rem 2rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
     cursor: pointer;
+    position: absolute;
+    bottom: 0;
 `;
 
 const FEATURECONTAINER = styled.div`
     display: flex;
     flex-direction: column;
-    //background: pink;
+    padding: 1rem;
 
     @media(min-width: 768px) {
         flex-direction: row;
@@ -127,7 +141,7 @@ const About = () => {
             </INTROCONTAINER>
             <FEATURECONTAINER>
                 <FEATURE>
-                    <img src={Blob2} height="60" />
+                    <img src={Blob2} height="70" />
                     <h4>npm Free</h4>
                     <p>
                     Become a contributing member of the open source JavaScript community. Create public packages, publish updates, audit your dependencies, and more.
@@ -135,8 +149,8 @@ const About = () => {
                     <BUTTON>LEARN MORE</BUTTON>
                 </FEATURE>
                 <FEATURE>
-                    <img src={Coffee} height="60" />
-                    <img src={Flag} height="60" />
+                    <img src={Coffee} height="70" />
+                    <img src={Flag} height="70"  className="flag"/>
                     <h4>npm Pro & Teams</h4>
                     <p>
                     For next-level JavaScript developers who want more capabilities. Pro and Teams add the ability to build private packages for you, your team, or for customers
@@ -144,7 +158,7 @@ const About = () => {
                     <BUTTON>LEARN MORE</BUTTON>
                 </FEATURE>
                 <FEATURE>
-                    <img src={Bars} height="60" />
+                    <img src={Bars} height="70" />
                     <h4>npm Enterprise</h4>
                     <p>
                     For very large teams and business-critical projects, npm Enterprise delivers features that organizations with hundreds of developers need, like SSO and enhanced security.
@@ -152,7 +166,7 @@ const About = () => {
                     <BUTTON>LEARN MORE</BUTTON>
                 </FEATURE>
                 <FEATURE>
-                    <img src={Shield} height="60" />
+                    <img src={Shield} height="70" />
                     <h4>npm PkgSafe</h4>
                     <p>
                     Our security team's unique insights into JavaScript vulnerabilities and threats are delivered as free and premium features, as well as services for resellers and others.
