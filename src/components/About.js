@@ -38,10 +38,10 @@ const INTRO = styled.div`
     h3 {
         @import url('https://fonts.googleapis.com/css?family=Arimo|Poppins&display=swap');
         font-family: 'Poppins', sans-serif;
-        font-size: 1.5rem;
         line-height: 1.25;
         font-weight: 600;
-        margin-bottom: 1rem;
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem !important;
     }
 
     @media(min-width: 768px) {
