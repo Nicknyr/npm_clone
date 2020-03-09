@@ -17,6 +17,7 @@ const STYLES = styled.div`
         @import url('https://fonts.googleapis.com/css?family=Arimo|Poppins&display=swap');
         font-family: 'Poppins', sans-serif;
         font-size: 1.5rem;
+        margin-bottom: 1rem;
         line-height: 1.25;
         font-weight: 600;
         max-width: 32em;

@@ -41,6 +41,7 @@ const INTRO = styled.div`
         font-size: 1.5rem;
         line-height: 1.25;
         font-weight: 600;
+        margin-bottom: 1rem;
     }
 
     @media(min-width: 768px) {

@@ -19,6 +19,7 @@ const CONTAINER = styled.div`
 
     h3 {
         font-size: 1.5rem;
+        margin-bottom: 1rem;
         color: snow;
     }
 
