@@ -112,8 +112,9 @@ const BUTTON = styled.button`
     background: transparent;
     border: 1px solid black;
     font-weight: bold;
-    font-size: 1.1em;
-    padding: .6em 2em;
+    font-size: 1em;
+    padding: .5rem 2rem;
+    letter-spacing: .1rem;
     cursor: pointer;
     position: absolute;
     bottom: 0;
