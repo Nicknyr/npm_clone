@@ -108,13 +108,10 @@ const FEATURE = styled.div`
 `;
 
 const BUTTON = styled.button`
-    height: auto;
     border-radius: 25px;
     background: transparent;
     border: 1px solid black;
-    //font-size: 1.1rem;
     font-weight: bold;
-    //padding: .6rem 2rem;
     font-size: 1.1em;
     padding: .6em 2em;
     cursor: pointer;
