@@ -16,6 +16,7 @@ const STYLES = styled.div`
 const CONTAINER = styled.div`
     text-align: center;
     padding: 2.5rem 1rem;
+    max-width: 32rem;
 
     h3 {
         font-size: 1.5rem;

@@ -15,10 +15,16 @@ const STYLES = styled.div`
     padding-bottom: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
 `;
 
 const INTROCONTAINER = styled.div`
     flex-basis: 100%;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
 `
 
 const INTRO = styled.div`
@@ -40,12 +46,11 @@ const INTRO = styled.div`
         font-family: 'Poppins', sans-serif;
         line-height: 1.25;
         font-weight: 600;
-        font-size: 1.5rem !important;
-        margin-bottom: 1rem !important;
+        font-size: 1.5rem;
     }
 
     @media(min-width: 768px) {
-        width: 70%;
+        //width: 70%;
         margin: 0 auto;
     }
 
@@ -116,15 +121,12 @@ const BUTTON = styled.button`
     padding: .5rem 2rem;
     letter-spacing: .1rem;
     cursor: pointer;
-    //position: absolute;
-    //bottom: 0;
-    //left: 50%;
-    //transform: translate(-50%, -50%);
 
     @media(min-width: 768px) {
         left: 0%;
         transform: translate(0%, 0%);
         bottom: 0;
+        position: absolute;
     }
  
 `;
@@ -141,7 +143,7 @@ const FEATURECONTAINER = styled.div`
     }
 
     @media(min-width: 992px) {
-        width: 80%;
+        //width: 80%;
         margin: 0 auto;
     }
 `;

@@ -12,6 +12,8 @@ const STYLES = styled.div`
     color: grey;
     border-top: 1px solid lightgrey;
     max-width: 96rem;
+    margin-left: auto;
+    margin-right: auto;
 
     &::after {
         content: "";
@@ -31,7 +33,6 @@ const STYLES = styled.div`
 const CONTAINER = styled.div`
     padding: 1em;
     height: auto;
-    //width: 100%;
     display: flex;
     flex-direction: column;
 

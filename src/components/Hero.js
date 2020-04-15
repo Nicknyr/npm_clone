@@ -20,9 +20,9 @@ const CONTAINER = styled.div`
     width: 100%;
     margin-left: 5%;
     margin-right: 5%;
-    //background: red;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    max-width: 48rem;
     
 
     @media(min-width: 768px) {

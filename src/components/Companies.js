@@ -12,6 +12,7 @@ const STYLES = styled.div`
     padding-right: 1rem;
     padding-left: 1rem;
     margin: 0 auto;
+    max-width: 64rem;
 
     h3 {
         @import url('https://fonts.googleapis.com/css?family=Arimo|Poppins&display=swap');

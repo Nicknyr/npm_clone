@@ -52,6 +52,9 @@ const NAVCONTAINER = styled.div`
     border-top-style: solid;
     border-width: 10px 0 0;
     border-image: linear-gradient(90deg, rgba(250,135,20,1) 0%, rgba(227,57,21,1) 50%, rgba(217,41,214,1) 100%) 3;
+    max-width: 96rem;
+    margin-left: auto;
+    margin-right: auto;
 
     ul {
         display: flex;

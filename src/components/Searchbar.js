@@ -19,6 +19,9 @@ const CONTAINER = styled.div`
     margin-right: 1%;
     flex-wrap: wrap;
     flex: 1 1 auto;
+    max-width: 96rem;
+    margin-left: auto;
+    margin-right: auto;
 
     .logo-container {
         flex-grow: 0;
