@@ -116,10 +116,10 @@ const BUTTON = styled.button`
     padding: .5rem 2rem;
     letter-spacing: .1rem;
     cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    //position: absolute;
+    //bottom: 0;
+    //left: 50%;
+    //transform: translate(-50%, -50%);
 
     @media(min-width: 768px) {
         left: 0%;
